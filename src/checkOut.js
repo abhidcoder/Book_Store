@@ -62,7 +62,7 @@ const [carts,setCarts] = useContext(BookContext);
       <ul>
         {carts.map((book, index) => (
           <div style={{marginTop:'6%'}} key={index}>
-            <img style={{height:'5%',width:'5%',marginBottom:'-3%'}} src={book.link} alt={book.title} />
+            <img style={{height:'10%',width:'10%',marginBottom:'-3%'}} src={book.imageLink} alt={book.title} />
             <h5 style={{marginTop:'4%'}}>{book.title}</h5>
             <p>Language: <p>{book.language}</p></p>
             <p>Author: <p>{book.author}</p></p>
