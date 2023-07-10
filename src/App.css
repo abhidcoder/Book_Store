@@ -1,0 +1,94 @@
+.container {
+  display: flex;
+  align-items: center;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  overflow-y: scroll; /* Always show vertical scroll bar */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #e6e6fa;
+  position: relative;
+  min-height: 0; /* Set a minimum height for the container */
+}
+
+.container::-webkit-scrollbar {
+  width: 10px; /* Adjust the width as needed */
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3); /* Adjust the thumb color */
+  border-radius: 5px; /* Adjust the border radius */
+}
+
+.container::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the track color to transparent */
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  background: linear-gradient(to right, transparent, #e6e6fa);
+  pointer-events: none;
+}
+
+.container::before {
+  left: -30px; /* Adjust the value to hide the left scroll button initially */
+  background: linear-gradient(to left, transparent, #e6e6fa);
+}
+
+.container::after {
+  right: -30px; /* Adjust the value to hide the right scroll button initially */
+  background: linear-gradient(to right, transparent, #e6e6fa);
+}
+
+.container img {
+  border: 1px solid #ccc;
+  flex: 0 0 auto;
+  width: 100%;
+  margin: 0 10px;
+}
+
+
+
+.checkout-button {
+  position: relative;
+  margin-top: 4%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cart-button {
+  height: 2%;
+  width: 15%;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.cart-emoji {
+  height: 2%;
+  width: 25%;
+  color: rgb(34, 79, 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+
+
